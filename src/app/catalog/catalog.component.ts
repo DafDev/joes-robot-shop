@@ -7,7 +7,7 @@ import { IProduct } from './product.model';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent {
-  products: any;
+  products: IProduct[];
   filter: string = '';
 
   constructor(){
@@ -192,9 +192,13 @@ export class CatalogComponent {
     return '/assets/images/robot-parts/' + product?.imageName;
   }
 
-  getFilteredProducts(){
+  getFilteredProducts(): IProduct[]{
     return this.filter === ''
     ? this.products
-    : this.products.filter((product: any) => product?.category === this.filter); 
+    : this.products.filter((product) => product?.category === this.filter); 
+  }
+
+  getDiscountedPrices(product: IProduct){
+    return product.discount > 0 ? ['strikethrough'] : [];
   }
 }
