@@ -1,0 +1,28 @@
+.product-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-details img {
+    width: 125px;
+  }
+  
+  .product-details .product-info {
+    margin-left: 25px;
+  }
+  
+  .product-details .name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .product-details .description {
+    margin-top: 3px;
+    font-size: 18px;
+  }
+  
+  .product-details .category {
+    margin-top: 20px;
+    color: #777;
+  }
+  

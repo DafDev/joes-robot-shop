@@ -13,7 +13,7 @@ export class ProductDetailsComponent {
   getImageUrl(product: IProduct): string{
     return '/assets/images/robot-parts/' + product?.imageName;
   }
-  
+
   getDiscountedPrices(product: IProduct){
     return product.discount > 0 ? ['strikethrough'] : [];
   }
