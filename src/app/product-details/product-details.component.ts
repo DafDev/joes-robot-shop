@@ -10,14 +10,9 @@ export class ProductDetailsComponent {
   @Input() product!: IProduct;
   @Output() buy = new EventEmitter();
 
-  getImageUrl(product: IProduct): string{
-    return '/assets/images/robot-parts/' + product?.imageName;
-  }
-
   getDiscountedPrices(product: IProduct){
     return product.discount > 0 ? ['strikethrough'] : [];
   }
-  
   buyButtonClicked() {
     this.buy.emit();
   }

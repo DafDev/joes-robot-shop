@@ -30,31 +30,3 @@
     text-decoration: line-through;
     font-size: 18;
   }
-
-  .product .product-details {
-    display: flex;
-    align-items: center;
-  }
-  
-  .product img {
-    width: 125px;
-  }
-  
-  .product .product-info {
-    margin-left: 25px;
-  }
-  
-  .product .name {
-    font-size: 22px;
-    font-weight: bold;
-  }
-  
-  .product .description {
-    margin-top: 3px;
-    font-size: 18px;
-  }
-  
-  .product .category {
-    margin-top: 20px;
-    color: #777;
-  }

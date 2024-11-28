@@ -1,22 +1,7 @@
 <div class="product">
-    <!-- <bot-product-info [product]="product"/> -->
-    <div class="product-details">
-      <img [src]="getImageUrl(product)" [alt]="product.name" />
-      <div class="product-info">
-        <div class="name">{{ product.name }}</div>
-        <div class="description">{{ product.description }}</div>
-        <div class="category">Part Type: {{ product.category }}</div>
-      </div>
-    </div>
+    <bot-product-info [product]="product"/>
     <div class="price">
-      <div
-        [ngStyle] = "{color: product.discount > 0 ? 'red':''}" 
-        [ngClass]="getDiscountedPrices(product)">
-        {{ product.price | currency:'EUR' }}
-      </div>
-      <div class="discount" *ngIf="product.discount > 0">
-        {{(product.price * (1 - product.discount)) | currency:'EUR'}}
-      </div>
+      <bot-product-price [product]="product"/>
       <button class="cta" (click)="buyButtonClicked()">Buy</button>
     </div>
   </div>
