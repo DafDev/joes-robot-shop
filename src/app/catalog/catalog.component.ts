@@ -187,18 +187,15 @@ export class CatalogComponent {
       },
     ];
   }
-
-  getImageUrl(product: IProduct): string{
-    return '/assets/images/robot-parts/' + product?.imageName;
-  }
-
+ 
   getFilteredProducts(): IProduct[]{
     return this.filter === ''
     ? this.products
     : this.products.filter((product) => product?.category === this.filter); 
   }
 
-  getDiscountedPrices(product: IProduct){
-    return product.discount > 0 ? ['strikethrough'] : [];
+  addToCart(product: IProduct){
+    this.products.push(product);
+    console.log(`product ${product.name} added to cart!`)
   }
 }
